@@ -1,12 +1,9 @@
 from django.db import models
-from django.utils import six
 
-if six.PY2:
+try:
     from django.utils.encoding import python_2_unicode_compatible
-if six.PY3:
+except: 
     from django.utils.six import python_2_unicode_compatible
-
-
 
 
 @python_2_unicode_compatible
